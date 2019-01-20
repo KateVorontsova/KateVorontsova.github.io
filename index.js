@@ -1,6 +1,6 @@
 $(function () {
     // Запрос к API сайта с погодными данными, который срабатывает по умолчанию и выводит данные для Самары
-    var searchLink = 'http://api.worldweatheronline.com/premium/v1/weather.ashx?key=a4c3fdb4e5a742fa9fa200835191401&lang=ru&tp=12&q=Samara&cc=no&mca=no&format=json';
+    var searchLink = 'https://api.worldweatheronline.com/premium/v1/weather.ashx?key=a4c3fdb4e5a742fa9fa200835191401&lang=ru&tp=12&q=Samara&cc=no&mca=no&format=json';
     // Функция вывода из JSON-файла, полученного от API и создание элементов в index.html   
     function weather() {
         // Запрос    
@@ -89,7 +89,7 @@ $(function () {
         var Latitude = pos.coords.latitude;
         var Longitude = pos.coords.longitude;
         //Добавление координат в запрос к сайту с погодными данными
-        var searchLink = 'http://api.worldweatheronline.com/premium/v1/weather.ashx?key=a4c3fdb4e5a742fa9fa200835191401&lang=ru&tp=12&q=' + Latitude + ',' + Longitude + '&cc=no&mca=no&format=json';
+        var searchLink = 'https://api.worldweatheronline.com/premium/v1/weather.ashx?key=a4c3fdb4e5a742fa9fa200835191401&lang=ru&tp=12&q=' + Latitude + ',' + Longitude + '&cc=no&mca=no&format=json';
         //
         //Добавление координат в запрос к сайту для определения города и страны
         var locationLink = 'https://geocode-maps.yandex.ru/1.x/?apikey=959ef85a-fdbb-4a09-aadb-7e380f402fc9&geocode=' + Latitude + ',' + Longitude + '&format=json';
